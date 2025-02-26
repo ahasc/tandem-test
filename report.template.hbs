@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rapport d'Activité</title>
+        <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .anomalies { margin-top: 30px; }
+        .anomalie { background-color: #ffefef; padding: 10px; border-left: 4px solid red; margin-bottom: 10px; }
+    </style>
+    </head>
+    <body>
+
+        <h1>Rapport d'Activité</h1>
+
+        <h2>Top 10 des pages les plus visitées</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Page</th>
+                    <th>Nombre de visites</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each topPages}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{this.[0]}}</td>
+                    <td>{{this.[1]}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        {{#if anomalies.length}}
+        <div class="anomalies">
+            <h2>Anomalies détectées</h2>
+            {{#each anomalies}}
+            <div class="anomalie">
+                <strong>Page :</strong> {{this.path}} <br>
+                <strong>Erreur :</strong> {{this.text}} <br>
+                <strong>Date :</strong> {{this.event_time}}
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+
+    </body>
+</html>

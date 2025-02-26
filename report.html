@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rapport d'Activité</title>
+        <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .anomalies { margin-top: 30px; }
+        .anomalie { background-color: #ffefef; padding: 10px; border-left: 4px solid red; margin-bottom: 10px; }
+    </style>
+    </head>
+    <body>
+
+        <h1>Rapport d'Activité</h1>
+
+        <h2>Top 10 des pages les plus visitées</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Page</th>
+                    <th>Nombre de visites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>/</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>/checkout</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>/products</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>/cart</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>/settings</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>/blog</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>/random</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>/faq</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>/account</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>/products/wireless-printer</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="anomalies">
+            <h2>Anomalies détectées</h2>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Payment gateway timeout <br>
+                <strong>Date :</strong> 2025-02-06 09:00:52
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> No items in cart <br>
+                <strong>Date :</strong> 2025-02-06 09:10:08
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /faq <br>
+                <strong>Erreur :</strong> No answer available <br>
+                <strong>Date :</strong> 2025-02-06 09:15:11
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Payment declined <br>
+                <strong>Date :</strong> 2025-02-06 09:25:23
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Item out of stock <br>
+                <strong>Date :</strong> 2025-02-06 09:35:36
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Payment service unavailable <br>
+                <strong>Date :</strong> 2025-02-06 09:45:36
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /faq <br>
+                <strong>Erreur :</strong> No answer available <br>
+                <strong>Date :</strong> 2025-02-06 10:05:14
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Unrecognized payment method <br>
+                <strong>Date :</strong> 2025-02-06 10:20:32
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Cart is empty <br>
+                <strong>Date :</strong> 2025-02-06 10:25:09
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /checkout <br>
+                <strong>Erreur :</strong> Payment declined <br>
+                <strong>Date :</strong> 2025-02-06 10:55:28
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /settings <br>
+                <strong>Erreur :</strong> Unable to update preferences <br>
+                <strong>Date :</strong> 2025-02-06 11:05:11
+            </div>
+            <div class="anomalie">
+                <strong>Page :</strong> /random <br>
+                <strong>Erreur :</strong> No results <br>
+                <strong>Date :</strong> 2025-02-06 11:10:07
+            </div>
+        </div>
+
+    </body>
+</html>
