@@ -31,3 +31,11 @@ At this point, I hadn't so much time left so I decided to make things simple :
 - I don't know how to categorize a behavior as an anomaly, but I can at least assume that a trace about a div with class "error-message" could be highlighted
 
 With these two informations, I generated an HTML report using a templating tool.
+
+## Industrialization
+
+Let's assume from now that we have a functionnal script that satisfy all requirements.
+
+I'm not sure it would be a golden solution regarding costs but, in order to use this script in a production context, I would propose the following solution :
+
+Currently, the file is stored inside an AWS S3 bucket. From there, it's possible to bind S3 events to EventBridge, allowing to run a StepFunction. I never used this service, but from what I understand in the presentation page, logs processing is a common use case. We could use it to take the file and spawn as much Lambda functions as needed to process each chunk of the file. Then, after all functions have finished, a final Lambda could process results and produce the report. Another steps could even be set up, like a notification event.
